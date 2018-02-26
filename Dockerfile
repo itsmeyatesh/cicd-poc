@@ -1,6 +1,5 @@
-FROM openjdk:8-jdk-alpine
+FROM dockerfile/java:oracle-java8
 VOLUME /tmp
 ARG JAR_FILE
 ADD ${JAR_FILE} target/greeting.jar
-RUN 'touch target/greeting.jar'
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","target/greeting.jar"]
