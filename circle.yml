@@ -1,9 +1,9 @@
 dependencies:
   override:
     - mvn -DskipTests clean install dependency:resolve-plugins dependency:go-offline
-    
 deployment:
   docker_hub:
     branch: master
     commands: 
+      - docker build -t itsmeyatesh/cicd-poc:latest
       - $DOCKER_TRIGGER
