@@ -5,5 +5,4 @@ deployment:
   docker_hub:
     branch: master
     commands: 
-      - docker build -t itsmeyatesh/cicd-poc:latest
       - $DOCKER_TRIGGER
