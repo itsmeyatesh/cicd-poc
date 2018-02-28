@@ -16,7 +16,7 @@ public class GreetingServiceController {
     private final AtomicLong counter = new AtomicLong();
 
     @RequestMapping(method=RequestMethod.GET)
-    public @ResponseBody Greeting greeting(@RequestParam(value="name", defaultValue="Greetings") String name) {
+    public @ResponseBody Greeting greeting(@RequestParam(value="name", defaultValue="Sopra Banking") String name) {
         return new Greeting(counter.incrementAndGet(),
                             String.format(template, name));
     }
