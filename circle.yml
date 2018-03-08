@@ -1,5 +1,7 @@
-deployment:
-  docker_hub:
-    branch: master
-    commands: 
-      - $DOCKER_TRIGGER
+    steps:
+      - run:
+          name: Greeting
+          command: echo Hello, world.
+      - run:
+          name: Print the Current Time
+          command: date
